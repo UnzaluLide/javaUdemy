@@ -52,17 +52,16 @@ public class Ticket {
         }else{
             System.out.println("has pasado el número de computadoras máximas permitidas por ticket");
         }
-
-
-
     }
 
     public void printTicket(){
         System.out.println("Ticket#"+this.getIdTicket());
-        int n=0;
-        for (int i = 0; i <contadorComputadoras ; i++) {
-            System.out.print(computadoras[i]);
+        if(computadoras.length>=1){
+            System.out.print(computadoras[0]);
+        }
+        for (int i = 1; i <contadorComputadoras ; i++) {
             System.out.println("******************************************************************************************");
+            System.out.print(computadoras[i]);
         }
     }
 }
